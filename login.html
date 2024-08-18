@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap and jQuery CDN Example</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <input type="hidden" id="_csrf" name="_csrf" value="">
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label required-field" for="brSearchBrn">জন্ম নিবন্ধন নম্বর</label>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <input class="form-control" name="brSearchAliveBrnCorr" id="brSearchBrn"
+                        placeholder="জন্ম নিবন্ধন নং" value="" type="text">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label required-field" for="brSearchDob">জন্ম তারিখ</label>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <input class="form-control datepicker" name="brSearchDob" id="brSearchDob" placeholder="জন্ম তারিখ"
+                        type="text" value="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label required-field" for="captcha">ক্যাপচা</label>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <div class="img-responsive">
+                        <img id="captcha" src="">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <input type="text" id="captchaAns" name="captchaAns" placeholder="Enter Captcha"
+                        class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <input type="button" class="btn btn-info ripple" value="অনুসন্ধান" name="search_by_ubrn_and_dob"
+                        id="search_by_ubrn_and_dob">
+                </div>
+            </div>
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                function onloadcall() {
+                    $.ajax({
+                        url: 'https://api.jstutul.top/api/', // Your API endpoint
+                        method: 'GET', // HTTP method
+                        dataType: 'json', // Expected response data type
+                        success: function (response) {
+                            console.log(response);
+                            $("#captcha").attr('src', response.capctha);
+                            $("#_csrf").val(response.csrf_token);
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle errors
+                            alert('Error: ' + xhr.status + ' ' + error);
+                        }
+                    });
+                }
+                onloadcall();
+                $(document).on('click', '#search_by_ubrn_and_dob', function () {
+                    var birthNo = $("#brSearchBrn").val();
+                    var csrf = $("#_csrf").val();
+                    var birthDate = $("#brSearchDob").val();
+                    var capthchaAns = $("#captchaAns").val();
+                    console.log(birthNo, birthDate, csrf, capthchaAns);
+                    $.ajax({
+                        url: 'http://127.0.0.1:8000/api-post/', // Your API endpoint
+                        method: 'POST',
+                        dataType: 'json',
+                        data: JSON.stringify({
+                            'birthno': birthNo,
+                            'bdate': birthDate,
+                            'captcha': capthchaAns,
+                            'token': csrf
+                        }),
+                        success: function (response) {
+                            console.log(response);
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle errors
+                            alert('Error: ' + xhr.status + ' ' + error);
+                        }
+                    });
+                })
+
+            });
+        </script>
+        <!-- Bootstrap JavaScript -->
+</body>
+
+</html>

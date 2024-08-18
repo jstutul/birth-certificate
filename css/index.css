@@ -1,0 +1,57 @@
+
+/*================================
+=              Index             =
+================================*/
+.bs-logo {
+    text-align: center;
+}
+.bs-logo img {
+    max-height: 70px;
+    margin-bottom: 15px;
+}
+.brndcard label {
+    font-weight: 600;
+    color: var(--darkbrandcolor);
+}
+.banner .banner-img-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--bs-border-color);
+}
+.banner .banner-img-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+.service-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    flex-direction: column;
+    text-align: center;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: var(--bs-white);
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+}
+.service .service-img-wrapper img {   
+    height: 100px;
+}
+.service-img-wrapper h3 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: var(--darkbrandcolor);
+    font-size: 20px;
+    font-weight: 600;
+}
+/*=====  End of Index  ======*/
+@media (max-width: 991px) {
+}
+@media (max-width: 575px) {
+    
+}
+
+
+

@@ -1,0 +1,235 @@
+
+/*================================
+=             Login              =
+================================*/
+
+.login-page {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.login-page .introduction {
+    float: left;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-image: url("../images/bj-back.png");
+}
+.login-page .introduction .cont {
+    background-color: rgb(21, 60, 101, 0.7);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.login-page .welcome {
+    float: left;
+    padding: 0;
+    position: relative;
+    background: var(--bs-white);
+    background-image: url("../images/lbst.png");
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.login-page .welcome .lcont {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+}
+.login-page .welcome .lcont .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--bs-white);
+}
+.login-page .welcome .lcont .ulogin-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--brandcolor);
+    margin: 30px 10px 20px 10px;
+}
+.login-page .welcome .lcont .ulogin-title i {
+    margin-right: 10px;
+}
+.login-page .welcome .lcont .lf {
+    text-align: left;
+    width: 100%;
+}
+.login-page .welcome .lcont .lf label {
+    font-weight: 500;
+    color: var(--bs-light-text-emphasis);
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 10px;
+}
+.login-page .welcome .form-control {
+    border-color: var(--brandcolor);
+    background-color: var(--bs-white);
+    color: var(--bs-light-text-emphasis);
+    margin-bottom: 18px;
+}
+.login-page .welcome .form-control:not(textarea) {
+    height: 60px;
+}
+.login-page .welcome .btn-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0px auto;
+}
+.login-page .welcome .btn-wrapper .btn {
+    padding: 12px 20px;
+    border-radius: 50px;
+    margin: 0px auto;
+}
+.login-page .welcome .btn-wrapper .btn .icn{
+    margin-right: 5px;
+}
+.lf .input-group .spbtn {
+    background-color: var(--bs-white);
+    border: 1px solid var(--brandcolor);
+    height: 60px;
+}
+.lf .input-group .spbtn:focus,
+.lf .input-group .spbtn:active {
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+:-moz-placeholder {
+    opacity: 1;
+    -moz-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+::-moz-placeholder {
+    opacity: 1;
+    -moz-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+:-ms-input-placeholder {
+    opacity: 1;
+    -ms-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+::placeholder {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+*:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+*:focus:-moz-placeholder {
+    opacity: 0;
+}
+
+*:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+*:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+
+*:focus::placeholder {
+    opacity: 0;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.form-control-placeholder {
+    position: absolute;
+    top: 5px;
+    padding: 13px 0 0 13px;
+    transition: all 200ms;
+    opacity: 0.7;
+}
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder,
+.input-group .form-control:focus + .form-control-placeholder,
+.input-group .form-control:valid + .form-control-placeholder {
+    font-size: 75%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    z-index: 5;
+    top: 10px;
+    left: 10px;
+    padding: 2px 5px;
+    background-color: var(--bs-white);    
+}
+.login-page .welcome .form-control:focus,
+.input-group .form-control:focus,
+.lf .input-group .spbtn:focus {
+    border-color: var(--bs-white);
+}
+.speechbubbles {
+    display: flex;
+    background-color: var(--darkbrandcolor);
+    padding: 10px 30px;
+    border-radius: 30px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 5;
+}
+.speechbubbles:before,
+.speechbubbles:after {
+    content: "";
+    background-color: var(--darkbrandcolor);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+.speechbubbles:before {
+    width: 44px;
+    height: 44px;
+    top: -12px;
+    left: 28px;
+    box-shadow: -50px 30px 0 -12px var(--darkbrandcolor);
+}
+.speechbubbles:after {
+    bottom: -10px;
+    right: 26px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 40px -34px 0 0 var(--darkbrandcolor), -28px -6px 0 -2px var(--darkbrandcolor), -24px 17px 0 -6px var(--darkbrandcolor), -5px 25px 0 -10px var(--darkbrandcolor);
+}
+
+/*=====  End of Login  ======*/
+@media (max-width: 991px) {
+    .login-page .welcome .lcont {
+        margin: 30px 15px 50px 15px;
+    }
+    .login-page {
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    .login-page .introduction .cont {
+        padding: 100px 20px;
+    }
+}
+@media (max-width: 575px) {
+    
+}
