@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="colorbox.css">
+</head>
+
+<body>
+
+
+    <button id="spedit">click</button>
+    <script src="jquery.min.js"></script>
+    <script src="jquery.colorbox.js"></script>
+
+    <script>
+        $(document).on('click', '#spedit', function () {
+            var var_spid = $(this).attr("spid");
+            popup_url = "https://bdris.gov.bd/br/correction",
+                $.colorbox({
+                    iframe: true,
+                    width: '900px',
+                    height: '500px',
+                    href: popup_url,
+                    scrolling: true,
+                    innerWidth: '545px',
+                    fastIframe: false,
+                    onClosed: function () {
+                        if (parent.data_modified) {
+                            parent.data_modified = false;
+                            window.location.reload();
+                        }
+                    },
+                    onComplete: function () {
+                        $("iframe").contents().find("body").css("background-color", "#FFF");
+                        console.log("innerWidth", $(window).innerWidth())
+                        if ($(window).innerWidth() <= 768) {
+                            $.colorbox.resize({ width: '75%', height: '75%' });
+                        }
+                    }
+                });
+        })
+    </script>
+</body>
+
+</html>

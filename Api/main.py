@@ -51,38 +51,6 @@ def getniddata(session):
     return json.dumps(response_json, indent=4)
 
 
-def getbirthdata(session,birthno,d,m,y):
-    token = gettoken(session)
-    url = 'http://crvs-institute.banbeis.gov.bd/get-student-brn-info'
-
-    # Get cookies directly from the session
-    cookies = session.cookies.get_dict()
-    xsrf_token = cookies.get('XSRF-TOKEN')
-    crvs_session = cookies.get('crvs_session')
-
-    headers = {
-        'Accept': 'application/json, text/javascript, */*; q=0.01',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Connection': 'keep-alive',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
-        'X-CSRF-TOKEN': token,
-        'X-Requested-With': 'XMLHttpRequest'
-    }
-
-    # Define the form data
-    data = {
-        'brn': birthno,
-        'day': d,
-        'month': m,
-        'year': y
-    }
-
-    response_json = session.post(url, headers=headers, data=data, verify=False)
-    response_json = response_json.json()  # Parse JSON response
-    return json.dumps(response_json, indent=4)
-
-
-
 login_page_url = 'http://crvs-institute.banbeis.gov.bd/institute-login'
 login_check_url = 'http://crvs-institute.banbeis.gov.bd/institute-login-check'
 session = requests.Session()

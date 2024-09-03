@@ -9,34 +9,28 @@
 </head>
 
 <body>
-    <div class="container">
-        <div>
+    <div class="container mt-4">
+        <form id="birth_info_correction_application_form" action="" enctype="multipart/form-data">
             <input type="hidden" id="_csrf" name="_csrf" value="">
             <div class="form-group row">
                 <label class="col-md-3 col-form-label required-field" for="brSearchBrn">জন্ম নিবন্ধন নম্বর</label>
-            </div>
-            <div class="form-group row">
                 <div class="col-md-6">
                     <input class="form-control" name="brSearchAliveBrnCorr" id="brSearchBrn"
-                        placeholder="জন্ম নিবন্ধন নং" value="" type="text">
+                        placeholder="জন্ম নিবন্ধন নং" type="text">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-md-3 col-form-label required-field" for="brSearchDob">জন্ম তারিখ</label>
-            </div>
-            <div class="form-group row">
                 <div class="col-md-6">
                     <input class="form-control datepicker" name="brSearchDob" id="brSearchDob" placeholder="জন্ম তারিখ"
-                        type="text" value="">
+                        type="text">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-md-3 col-form-label required-field" for="captcha">ক্যাপচা</label>
-            </div>
-            <div class="form-group row">
                 <div class="col-md-6">
                     <div class="img-responsive">
-                        <img id="captcha" src="">
+                        <img id="captcha" src="" alt="CAPTCHA">
                     </div>
                 </div>
             </div>
@@ -48,61 +42,97 @@
             </div>
             <div class="form-group row">
                 <div class="col-md-6">
-                    <input type="button" class="btn btn-info ripple" value="অনুসন্ধান" name="search_by_ubrn_and_dob"
-                        id="search_by_ubrn_and_dob">
+                    <button type="button" class="btn btn-info" id="search_by_ubrn_and_dob">অনুসন্ধান</button>
                 </div>
             </div>
-        </div>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                function onloadcall() {
-                    $.ajax({
-                        url: 'https://api.jstutul.top/api/', // Your API endpoint
-                        method: 'GET', // HTTP method
-                        dataType: 'json', // Expected response data type
-                        success: function (response) {
-                            console.log(response);
-                            $("#captcha").attr('src', response.capctha);
-                            $("#_csrf").val(response.csrf_token);
-                        },
-                        error: function (xhr, status, error) {
-                            // Handle errors
-                            alert('Error: ' + xhr.status + ' ' + error);
-                        }
-                    });
+        </form>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
                 }
-                onloadcall();
-                $(document).on('click', '#search_by_ubrn_and_dob', function () {
-                    var birthNo = $("#brSearchBrn").val();
-                    var csrf = $("#_csrf").val();
-                    var birthDate = $("#brSearchDob").val();
-                    var capthchaAns = $("#captchaAns").val();
-                    console.log(birthNo, birthDate, csrf, capthchaAns);
-                    $.ajax({
-                        url: 'http://127.0.0.1:8000/api-post/', // Your API endpoint
-                        method: 'POST',
-                        dataType: 'json',
-                        data: JSON.stringify({
-                            'birthno': birthNo,
-                            'bdate': birthDate,
-                            'captcha': capthchaAns,
-                            'token': csrf
-                        }),
-                        success: function (response) {
-                            console.log(response);
-                        },
-                        error: function (xhr, status, error) {
-                            // Handle errors
-                            alert('Error: ' + xhr.status + ' ' + error);
-                        }
-                    });
-                })
+            }
+            return cookieValue;
+        }
+        $(document).ready(function () {
 
+            function onloadcall() {
+                $.ajax({
+                    url: 'https://api.jstutul.top/api/', // Your API endpoint
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (response) {
+                        $("#captcha").attr('src', response.captcha);
+                        $("#_csrf").val(response.csrf_token);
+                        console.log(response.cookies);
+                        for (const [key, value] of Object.entries(response.cookies)) {
+                            document.cookie = `${key}=${value}; path=/`;
+                        }
+                        document.cookie = `session_id=${response.session_id}; path=/`;
+                    },
+                    error: function (xhr, status, error) {
+                        alert('Error: ' + xhr.status + ' ' + error);
+                    }
+                });
+            }
+
+            onloadcall();
+            $(document).on('click', '#search_by_ubrn_and_dob', function () {
+                var birthNo = $("#brSearchBrn").val();
+                var csrf = $("#_csrf").val();
+                var birthDate = $("#brSearchDob").val();
+                var captchaAns = $("#captchaAns").val();
+                const sessionId = getCookie('session_id');
+                $.ajax({
+                    url: 'https://api.jstutul.top/api-post/', // Your API endpoint
+                    method: 'POST',
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        'birthno': birthNo,
+                        'bdate': birthDate,
+                        'captcha': captchaAns,
+                        'token': csrf,
+                        'sessionId': sessionId
+                    }),
+                    success: function (response) {
+                        console.log(response);
+                        $.each(response[0], function (key, value) {
+                            $('#data-table tbody').append(
+                                `<tr>
+                                <td>${key}</td>
+                                <td>${value}</td>
+                            </tr>`
+                            );
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        alert('Error: ' + xhr.status + ' ' + error);
+                    }
+                });
             });
-        </script>
-        <!-- Bootstrap JavaScript -->
+        });
+    </script>
 </body>
 
 </html>

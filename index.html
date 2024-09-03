@@ -4,749 +4,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViewData dp7 Ltd.</title>
-
-    <meta name="title" content="dp7 Ltd.">
-    <meta name="description" content="">
-
-    <!-- opengraph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="dp7 Ltd.">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/sweetalert.css" />
-    <link rel="stylesheet" href="css/jquery-ui.min.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/index.css" />
-
-</head>
-
-
-
-<body>
-    <!--============================
-	=            header            =
-	=============================-->
-    <header class="sticky-top">
-        <div class="hwrap">
-            <div class="logonmenuwrap">
-                <a href="/"><img src="images/logo.png" alt=""></a>
-                <button class="bd-sidebar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav"
-                    aria-controls="bd-docs-nav" aria-expanded="true" aria-label="Toggle docs navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <div class="dvactwrap dropdown">
-                            <div class="userpicnamewrap">
-                                <a href="#" class="userdetwrap dropdown-toggle" data-bs-toggle="dropdown">
-                                    <img src="images/useravater.png" alt="">
-                                    <span class="user-name">
-                                        <div class="uname" title="dp7 Admin"> dp7 Admin</div>
-                                    </span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="cpasswrap"><a class="dropdown-item cpass" href="#"><span
-                                                class="fa-solid fa-pen-to-square icn"></span>Change Password</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li class="loutwrap"><a class="dropdown-item lout" href="#"><span
-                                                class="fa-solid fa-right-from-bracket icn"></span>Log Out</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-
-    <!-- ----------------------------------------- -->
-    <!--                  Content                  -->
-    <!-- ----------------------------------------- -->
-
-
-    <div class="container-fluid bd-layout">
-        <aside class="bd-sidebar">
-            <nav class="bd-links collapse" id="bd-docs-nav">
-                <div class="userdetmview"></div>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#" class="d-flex align-items-center rounded active" aria-current="page">
-                            <span class="fa-solid fa-house icn"></span>Home
-                        </a>
-                    </li>
-                    <li>
-                        <button class="btn d-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#aboutus-collapse" aria-expanded="true" aria-current="true">
-                            <span class="fa-solid fa-newspaper icn"></span>About Us
-                        </button>
-                        <div class="collapse" id="aboutus-collapse">
-                            <ul class="list-unstyled small">
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>Corporate profile</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-eye icn"></span>Compliance Status</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-square-poll-horizontal icn"></span>Board of Director</a>
-                                </li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-square-poll-horizontal icn"></span>Senior Management
-                                        Team</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button class="btn d-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#services-collapse" aria-expanded="true" aria-current="true">
-                            <span class="fa-solid fa-newspaper icn"></span>Services
-                        </button>
-                        <div class="collapse" id="services-collapse">
-                            <ul class="list-unstyled small">
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>DP SERVICE</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>BROKERAGE SERVICE</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>IPO APPLICATION</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>BSL RESEARCH</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>CUSTODIAL SERVICE</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>SME PLATFORM ACCESSE</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>ONLINE SERVICES</a></li>
-                                <li><a href="#" class="d-flex align-items-center rounded"><span
-                                            class="fa-solid fa-list-check icn"></span>BONDS DEALING</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="d-flex align-items-center rounded">
-                            <span class="fa-solid fa-download icn"></span>Downloads
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="d-flex align-items-center rounded">
-                            <span class="fa-solid fa-address-book icn"></span>Contact Us
-                        </a>
-                    </li>
-                </ul>
-                <div class="actbtnmwrap"></div>
-            </nav>
-        </aside>
-
-        <section class="bd-main">
-            <main>
-
-                <div class="contwrapper ptb30">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <!-- Header card -->
-                            <div class="card brndcard">
-                                <div class="card-header">
-                                    <h2 class="title">HEADER</h2>
-                                </div>
-                                <div class="card-body">
-                                    <label>Add/Update dp7 Securities Logo</label>
-                                    <div class="seprator"></div>
-                                    <div class="row g-3">
-                                        <div class="col-lg-6 col-lg-6 offset-lg-3">
-                                            <div class="bs-logo">
-                                                <img id="hdrLogo" src="~/images/logo.png">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="file" class="file">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control bfc" readonly="readonly"
-                                                        placeholder="Choose File" id="uploadedBannerFile">
-                                                    <button class="btn browse" type="button">Browse</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 d-flex justify-content-center align-items-center">
-                                            <button type="button" class="btn btn-brand">Update</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Banner card -->
-                            <div class="card brndcard mt30">
-                                <div class="card-header">
-                                    <h2 class="title">BANNER</h2>
-                                </div>
-                                <div class="card-body">
-                                    <label>Add New</label>
-                                    <div class="seprator"></div>
-                                    <div class="row g-3">
-                                        <div class="col-lg-5">
-                                            <div class="form-group">
-                                                <input type="file" class="file">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control bfc" readonly="readonly"
-                                                        placeholder="Choose File" id="uploadedBannerFile">
-                                                    <button class="btn browse" type="button">Browse</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <input type="number" min="0" class="form-control"
-                                                placeholder="Display Order (i.e.: 103)" id="txtBannerOrder">
-                                        </div>
-                                        <div class="col-lg-2 d-flex justify-content-center align-items-center">
-                                            <button type="button" class="btn btn-brand">Upload</button>
-                                        </div>
-                                    </div>
-                                    <label class="mt-3">Banner List</label>
-                                    <div class="seprator"></div>
-                                    <div class="row">
-                                        <div class="col-lg-6 my-3">
-                                            <div class="banner">
-                                                <div class="banner-img-wrapper">
-                                                    <img src="~/images/topslider/topslider1.png" title="Serial No.: 1">
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-bnrDelete"
-                                                    data-id="7"><span class="fa-solid fa-trash-can icn"></span>
-                                                    Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 my-3">
-                                            <div class="banner">
-                                                <div class="banner-img-wrapper">
-                                                    <img src="~/images/topslider/topslider2.png" title="Serial No.: 2">
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-bnrDelete"
-                                                    data-id="7"><span class="fa-solid fa-trash-can icn"></span>
-                                                    Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 my-3">
-                                            <div class="banner">
-                                                <div class="banner-img-wrapper">
-                                                    <img src="~/images/topslider/topslider3.png" title="Serial No.: 3">
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-bnrDelete"
-                                                    data-id="7"><span class="fa-solid fa-trash-can icn"></span>
-                                                    Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 my-3">
-                                            <div class="banner">
-                                                <div class="banner-img-wrapper">
-                                                    <img src="~/images/topslider/topslider4.png" title="Serial No.: 4">
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-bnrDelete"
-                                                    data-id="7"><span class="fa-solid fa-trash-can icn"></span>
-                                                    Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- About dp7 card -->
-                            <div class="card brndcard mt30">
-                                <div class="card-header">
-                                    <h2 class="title">ABOUT DP7 SECURITIES LTD.</h2>
-                                </div>
-                                <div class="card-body">
-                                    <label>Change Title</label>
-                                    <div class="seprator"></div>
-                                    <div class="row g-3">
-                                        <div class="col-lg-12">
-                                            <input type="text" class="form-control" id="txtBSLTitle"
-                                                placeholder="Titile">
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div id="editor"></div>
-                                        </div>
-                                        <div class="col-lg-12 d-flex justify-content-center align-items-center">
-                                            <button type="button" class="btn btn-brand">Update</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Services card -->
-                            <div class="card brndcard mt30">
-                                <div class="card-header">
-                                    <h2 class="title">SERVICES</h2>
-                                </div>
-                                <div class="card-body">
-                                    <label>Add New</label>
-                                    <div class="seprator"></div>
-                                    <div class="row g-3">
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <input type="file" class="file">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control bfc" readonly="readonly"
-                                                        placeholder="Select Service Icon" id="uploadedSrvcIcon">
-                                                    <button class="btn browse" type="button">Browse</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <input type="text" class="form-control" placeholder="Enter Service Name"
-                                                id="txtSrvcName">
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <input type="number" min="0" class="form-control"
-                                                placeholder="Display Order (i.e.: 103)" id="txtSrvcOrder">
-                                        </div>
-                                        <div class="col-lg-1 d-flex justify-content-center align-items-center">
-                                            <button type="button" class="btn btn-brand">Upload</button>
-                                        </div>
-                                    </div>
-                                    <label class="mt-3">Service List</label>
-                                    <div class="seprator"></div>
-                                    <div class="row">
-                                        <div class="col-lg-3 my-3">
-                                            <div class="service">
-                                                <div class="service-img-wrapper">
-                                                    <img src="~/images/services/dp-service.png">
-                                                    <h3>DP SERVICE</h3>
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-srvcDelete"
-                                                    data-id="1"><span
-                                                        class="fa-solid fa-trash-can icn"></span>Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 my-3">
-                                            <div class="service">
-                                                <div class="service-img-wrapper">
-                                                    <img src="~/images/services/broker-service.png">
-                                                    <h3>BROKERAGE SERVICE</h3>
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-srvcDelete"
-                                                    data-id="1"><span
-                                                        class="fa-solid fa-trash-can icn"></span>Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 my-3">
-                                            <div class="service">
-                                                <div class="service-img-wrapper">
-                                                    <img src="~/images/services/ipo-app.png">
-                                                    <h3>IPO APPLICATION</h3>
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-srvcDelete"
-                                                    data-id="1"><span
-                                                        class="fa-solid fa-trash-can icn"></span>Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 my-3">
-                                            <div class="service">
-                                                <div class="service-img-wrapper">
-                                                    <img src="~/images/services/research-icon.png">
-                                                    <h3>BSL RESEARCH</h3>
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-srvcDelete"
-                                                    data-id="1"><span
-                                                        class="fa-solid fa-trash-can icn"></span>Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 my-3">
-                                            <div class="service">
-                                                <div class="service-img-wrapper">
-                                                    <img src="~/images/services/custodial-service.png">
-                                                    <h3>CUSTODIAL SERVICE</h3>
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-srvcDelete"
-                                                    data-id="1"><span
-                                                        class="fa-solid fa-trash-can icn"></span>Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 my-3">
-                                            <div class="service">
-                                                <div class="service-img-wrapper">
-                                                    <img src="~/images/services/sme.png">
-                                                    <h3>SME PLATFORM ACCESS</h3>
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-srvcDelete"
-                                                    data-id="1"><span
-                                                        class="fa-solid fa-trash-can icn"></span>Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 my-3">
-                                            <div class="service">
-                                                <div class="service-img-wrapper">
-                                                    <img src="~/images/services/online-service.png">
-                                                    <h3>ONLINE SERVICES</h3>
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-srvcDelete"
-                                                    data-id="1"><span
-                                                        class="fa-solid fa-trash-can icn"></span>Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 my-3">
-                                            <div class="service">
-                                                <div class="service-img-wrapper">
-                                                    <img src="~/images/services/custodial-service_1.png">
-                                                    <h3>BONDS DEALING</h3>
-                                                </div>
-                                                <button class="btn btn-brand btn-danger mt-3 btn-srvcDelete"
-                                                    data-id="1"><span
-                                                        class="fa-solid fa-trash-can icn"></span>Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Footer card -->
-                            <div class="card brndcard mt30">
-                                <div class="card-header">
-                                    <h2 class="title">FOOTER</h2>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <label>Phone</label>
-                                            <input type="text" class="form-control" placeholder="Phone" id="txtFPhone">
-                                            <label class="mt-2">Fax</label>
-                                            <input type="text" class="form-control" placeholder="Fax" id="txtFFax">
-                                            <label class="mt-2">Mail</label>
-                                            <input type="text" class="form-control" placeholder="Mail" id="txtFEmail">
-                                            <label class="mt-2">Location</label>
-                                            <div id="editor1"></div>
-                                            <label class="mt-2">Office Hour (Open Days &amp; Time)</label>
-                                            <div class="office-hour">
-                                                <input type="text" class="form-control" id="txtFOpenDays">
-                                                <input type="text" class="form-control mt-2" id="txtFOfficeTime">
-                                            </div>
-                                            <label class="mt-2">Close Days</label>
-                                            <div class="office-hour">
-                                                <input type="text" class="form-control" id="txtFCloseDays">
-                                            </div>
-                                            <button class="btn btn-brand mt-3" id="btnFooterAddsSave">Update</button>
-                                        </div>
-                                        <div class="col-4 useful-links">
-                                            <label>Useful Links</label>
-                                            <div class="seprator"></div>
-                                            <label class="mt-2">Add New</label>
-                                            <input type="text" class="form-control" placeholder="Name" id="txtUFName">
-                                            <input type="url" class="form-control mt-2" placeholder="Link"
-                                                id="txtUFLink">
-                                            <input type="number" min="0" class="form-control mt-2"
-                                                placeholder="Display Order (i.e: 103)" id="txtUFOrder">
-                                            <button class="btn btn-brand mt-3" id="btnUseFulLnAdd"><span
-                                                    class="fa-solid fa-plus icn"></span>Add</button>
-                                            <div></div>
-                                            <label class="mt-3">Current List</label>
-                                            <div class="seprator"></div>
-                                            <ul class="list-unstyled current-list" id="usefulTbl">
-                                                <li><a href="https://www.dsebd.org/">Dhaka Stock Exchange
-                                                        (DSE)</a><button
-                                                        class="btn btn-sm btn-danger mt-1 btn-deleteUFLnk" data-id="1"
-                                                        data-toggle="tooltip" data-placement="Right" title="delete"><svg
-                                                            class="svg-inline--fa fa-trash-can" aria-hidden="true"
-                                                            focusable="false" data-prefix="fas" data-icon="trash-can"
-                                                            role="img" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 448 512" data-fa-i2svg="">
-                                                            <path fill="currentColor"
-                                                                d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z">
-                                                            </path>
-                                                        </svg><!-- <i class="fa-solid fa-trash-can"></i> Font Awesome fontawesome.com --></button>
-                                                </li>
-                                                <li><a href="https://www.sec.gov.bd/">Bangladesh SEC (BSEC)</a><button
-                                                        class="btn btn-sm btn-danger mt-1 btn-deleteUFLnk" data-id="2"
-                                                        data-toggle="tooltip" data-placement="Right" title="delete"><svg
-                                                            class="svg-inline--fa fa-trash-can" aria-hidden="true"
-                                                            focusable="false" data-prefix="fas" data-icon="trash-can"
-                                                            role="img" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 448 512" data-fa-i2svg="">
-                                                            <path fill="currentColor"
-                                                                d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z">
-                                                            </path>
-                                                        </svg><!-- <i class="fa-solid fa-trash-can"></i> Font Awesome fontawesome.com --></button>
-                                                </li>
-                                                <li><a href="https://www.cdbl.com.bd/">Central Depository
-                                                        (CDBL)</a><button
-                                                        class="btn btn-sm btn-danger mt-1 btn-deleteUFLnk" data-id="3"
-                                                        data-toggle="tooltip" data-placement="Right" title="delete"><svg
-                                                            class="svg-inline--fa fa-trash-can" aria-hidden="true"
-                                                            focusable="false" data-prefix="fas" data-icon="trash-can"
-                                                            role="img" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 448 512" data-fa-i2svg="">
-                                                            <path fill="currentColor"
-                                                                d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z">
-                                                            </path>
-                                                        </svg><!-- <i class="fa-solid fa-trash-can"></i> Font Awesome fontawesome.com --></button>
-                                                </li>
-                                                <li><a href="https://www.bb.org.bd/en/index.php">Bangladesh
-                                                        Bank</a><button
-                                                        class="btn btn-sm btn-danger mt-1 btn-deleteUFLnk" data-id="4"
-                                                        data-toggle="tooltip" data-placement="Right" title="delete"><svg
-                                                            class="svg-inline--fa fa-trash-can" aria-hidden="true"
-                                                            focusable="false" data-prefix="fas" data-icon="trash-can"
-                                                            role="img" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 448 512" data-fa-i2svg="">
-                                                            <path fill="currentColor"
-                                                                d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z">
-                                                            </path>
-                                                        </svg><!-- <i class="fa-solid fa-trash-can"></i> Font Awesome fontawesome.com --></button>
-                                                </li>
-                                                <li><a href="https://bicm.ac.bd/">Institute Of Capital Market
-                                                        (BICM)</a><button
-                                                        class="btn btn-sm btn-danger mt-1 btn-deleteUFLnk" data-id="5"
-                                                        data-toggle="tooltip" data-placement="Right" title="delete"><svg
-                                                            class="svg-inline--fa fa-trash-can" aria-hidden="true"
-                                                            focusable="false" data-prefix="fas" data-icon="trash-can"
-                                                            role="img" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 448 512" data-fa-i2svg="">
-                                                            <path fill="currentColor"
-                                                                d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z">
-                                                            </path>
-                                                        </svg><!-- <i class="fa-solid fa-trash-can"></i> Font Awesome fontawesome.com --></button>
-                                                </li>
-                                            </ul>
-                                            <label class="mt-3">Social Links</label>
-                                            <div class="seprator"></div>
-                                            <ul class="list-unstyled social-links">
-                                                <li>
-                                                    <label class="lblName">Facebook</label>
-                                                    <div class="d-flex">
-                                                        <input type="text" class="form-control mr-2 txtSLLink"
-                                                            data-id="1" value="">
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <label class="lblName">LinkedIn</label>
-                                                    <div class="d-flex">
-                                                        <input type="text" class="form-control mr-2 txtSLLink"
-                                                            data-id="2" value="">
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <label class="lblName">YouTube</label>
-                                                    <div class="d-flex">
-                                                        <input type="text" class="form-control mr-2 txtSLLink"
-                                                            data-id="3" value="">
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <label class="lblName">Whatsapp</label>
-                                                    <div class="d-flex">
-                                                        <input type="text" class="form-control mr-2 txtSLLink"
-                                                            data-id="4" value="">
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <label class="lblName">Twitter</label>
-                                                    <div class="d-flex">
-                                                        <input type="text" class="form-control mr-2 txtSLLink"
-                                                            data-id="7" value="">
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <button class="btn btn-brand mt-3"
-                                                        id="btnSocialLinkUpdate">Update</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4 map">
-                                            <label>Google Map Embed Link</label>
-                                            <div class="seprator"></div>
-                                            <input type="text" class="form-control" id="txtFGoogleMapLink"
-                                                placeholder="Enter Google Map Embed Link">
-                                            <iframe id="txtFGoogleMap" allowfullscreen="" loading="lazy"
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58423.37992814857!2d90.37309465240169!3d23.766584140049837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bebdfbd1af7f%3A0x64e28cbb4851cf73!2sbarakasecurities!5e0!3m2!1sen!2sbd!4v1684406089411!5m2!1sen!2sbd"></iframe>
-                                            <button class="btn btn-brand mt-3" id="btnFooterGMapSave">Update</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-
-            </main>
-        </section>
-    </div>
-
-    <!--============================
-	=            footer            =
-	=============================-->
-    <footer>
-        <section class="copyright">
-            <div class="copyText">
-                Copyright © <span id="copyDate">2023</span> J-It Solution. All Rights Reserved.
-            </div>
-            <div class="ucas">
-                <span>Development &amp; Maintenance by</span>
-                <a href="http://www.ucasbd.com/" target="_blank">
-                    <img src="images/ucas-logo.svg">
-                </a>
-            </div>
-        </section>
-    </footer>
-
-    <!-- scripts -->
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/ckeditor/ckeditor.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-    <script src="js/jquery.browser.min.js"></script>
-    <script src="js/jquery.maskedinput-1.3.min.js"></script>
-    <script type="text/javascript">
-
-        CKEDITOR.replace('editor', {
-            height: '100px'
-        });
-
-        CKEDITOR.replace('editor1', {
-            height: '100px'
-        });
-
-        $(document).on('click', '.browse, .bfc', function () {
-            var file = $(this).parent().parent().parent().find('.file');
-            file.trigger('click');
-        });
-
-        $(document).on('change', '.file', function () {
-            $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
-            // $(this).parent().find('.browse.btn.bbtn').html('<span class="icon-square-edit-outline"></span> edit');
-        });
-
-        $(document).ready(function () {
-
-        });
-    </script>
-    <script type="text/javascript">
-        var originalUserContent = $('.userpicnamewrap').html();
-        function checkWidth() {
-            var windowWidth = $(window).width();
-            var cpassBtn = $('.cpass');
-            var loutBtn = $('.lout');
-            var userDetails = $('.userdetwrap');
-
-            if (windowWidth < 992) {
-                $('.actbtnmwrap').html(cpassBtn.prop('outerHTML') + loutBtn.prop('outerHTML'));
-                var userHtml = userDetails.find('img, .user-name').clone();
-                $('.userdetmview').empty().append(userHtml);
-            } else {
-                $('.cpasswrap').html(cpassBtn);
-                $('.loutwrap').html(loutBtn);
-                $('.userpicnamewrap').html(originalUserContent);
-                $('.userdetmview').empty();
-                $('.actbtnmwrap').empty();
-            }
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .title {
+            border-left: 14px solid red;
+            border-right: 14px solid red;
+            text-align: center;
+            background-color: blue;
+            color: #fff;
         }
 
-        $(document).ready(function () {
+        .table thead tr th,
+        .table tbody tr td,
+        .table tfoot tr td {
+            text-align: center;
+        }
 
-            checkWidth();
+        .mt-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
 
-            $(window).resize(function () {
-                checkWidth();
-            });
+<body class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 mt-title">
+                <h3 class="title w-100">Table for Caesar Cipher Encryption Decryption</h3>
+                <p class="title w-50 text-center">Developed by Israt Jahan Jhumm</p>
+            </div>
+            <div class="col-sm-4 mx-auto">
+                <div class="my-form mt-4 border border-primary rounded p-4 shadow">
+                    <div class="mb-3">
+                        <label for="txtKey" class="form-label">Key for Decryption</label>
+                        <input type="number" class="form-control" id="txtKey" placeholder="enter key value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Ciphertext:</label>
+                        <input type="text" class="form-control" id="txtChiphertext" />
+                    </div>
+                    <div class="mb-3 text-center">
+                        <button class="btn btn-primary w-100" onclick="ShowResult()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-sm-6">
+                <div class="col-sm-12">
+                    <h3 class="title">Table for Caesar Cipher Encryption </h3>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered border-primary" id="tblenp">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Plain Text</th>
+                                <th>Key</th>
+                                <th colspan="2">Ciphertext in </th>
+                                <th></th>
+                            </tr>
 
-            //datepicker JS
-            $(".DateInput").datepicker(
-                {
-                    dateFormat: "dd/mm/yy",
-                    showAnim: "scale",
-                    changeMonth: true,
-                    changeYear: true,
-                    yearRange: "1950:2050"
-                });
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Text</td>
+                                <td>Number</td>
+                                <td>Algorithm</td>
+                                <td>Number </td>
+                                <td>Mod(26)</td>
+                                <td>Text</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
 
-            $(document).on("focus", ".check-date", function () {
-                $(this).mask("99/99/9999");
-            });
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="col-sm-12">
+                    <h3 class="title">Table for Caesar Cipher Decryption</h3>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered border-primary" id="tbldec">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Plaintext in </th>
+                                <th>Key</th>
+                                <th colspan="2">Plaintext in </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Text</td>
+                                <td>Number</td>
+                                <td>Algorithm</td>
+                                <td>Number </td>
+                                <td>Mod(26)</td>
+                                <td>Text</td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        const alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-            $(document).on("click", ".DateInput", function () {
-                $(".ui-datepicker").show();
-            });
 
-            $(document).on("blur", ".ui-datepicker", function () {
-                $(".ui-datepicker").hide();
-            });
-        });
+        function ShowResult() {
+            const key = parseInt(document.getElementById('txtKey').value, 10);
+            const ciphertext = document.getElementById('txtChiphertext').value.trim().toUpperCase();
 
-        $(document).on("click", ".bd-links a", function () {
-            $('.bd-links a').removeClass('active');
-            $(this).addClass('active');
-            var parentCollapse = $(this).closest('.collapse');
-            $('.collapse').not(parentCollapse).collapse('hide');
-            parentCollapse.collapse('show');
-        });
+            console.log(key, ciphertext);
+            encryptText(ciphertext, key);
+        }
 
-        //footer JS
-        const date = new Date();
-        let year = date.getFullYear();
-        document.getElementById("copyDate").innerHTML = year;
+        function decryptText(ciphertext, key) {
+            var _html = "";
 
+            for (let i = 0; i < ciphertext.length; i++) {
+                valkey = key
+                var char = ciphertext[i];
+                var position = alphabets.indexOf(char);
+                var newposition = (position - key + 26);
+                var shiftedPosition = newposition % 26;
+                let plaintext = alphabets[shiftedPosition];
+                let spn = '';
 
-
-
-        //datepicker JS
-        $(document).on("change", ".check-date", function () {
-            var obj = $(this);
-            var isValid = true;
-            var arrDate = obj.val().trim().split("/");
-            if (obj.val().trim() == "") {
-                return false;
-            }
-            var message = "";
-            if (arrDate.length != 3) {
-                message = "Invalid date format.";
-                isValid = false;
-            } else if (isNaN(arrDate[0]) || isNaN(arrDate[1]) || isNaN(arrDate[2])) {
-                message = "Day, month, year must be numeric value.";
-                isValid = false;
-            } else if (arrDate[0].length != 2 || arrDate[1].length != 2 || arrDate[2].length != 4) {
-                message = "Day, month must be 2 digit and year must be 4 digit.";
-                isValid = false;
-            } else if (parseInt(arrDate[0]) > 31 || parseInt(arrDate[0]) < 1) {
-                message = "Day must be between 1 to 31.";
-                isValid = false;
-            } else if (parseInt(arrDate[1]) > 12 || parseInt(arrDate[1]) < 1) {
-                message = "Month must be between 1 to 12.";
-                isValid = false;
-            } else {
-                var dt = new Date(arrDate[2], parseInt(arrDate[1]), 0);
-                var noOfDays = dt.getDate();
-                if (parseInt(arrDate[0]) > noOfDays) {
-                    message = "There is maximum " + noOfDays + " days in selected month.";
-                    isValid = false;
+                if (i == 1) {
+                    if (ciphertext.length > 2) {
+                        spn = 'rowspan="2"';
+                    }
+                    valkey = 'Backward (-)';
                 }
+                if (i > 1) {
+                    valkey = '';
+                    spn = '';
+                }
+                console.log(i);
+                _html += `<tr>
+                            <td>${char}</td>
+                            <td>${position}</td>`
+                if (i != 2) {
+                    _html += `<td ${spn}>${valkey}</td>`;
+                }
+                if ((position - key) < 0) {
+                    _html += `<td>(${position} + 26)- ${key}</td>`;
+                } else {
+                    _html += `<td>${position - key}</td>`;
+                }
+                _html += `<td>${shiftedPosition} </td>
+                            <td>${plaintext}</td>
+                         </tr>`;
             }
-            if (isValid == false) {
-                swal("Error", "Invalid date. " + message + " Format must be dd/mm/yyyy. (e.g. 01/01/2023)", "error");
-                obj.val("");
-                obj.focus();
+            $("#tbldec tfoot").html(_html);
+        }
+
+        function encryptText(ciphertext, key) {
+            var _html = "";
+            let result = '';
+
+            for (let i = 0; i < ciphertext.length; i++) {
+                valkey = key
+                var char = ciphertext[i];
+                var position = alphabets.indexOf(char);
+                var newposition = (position + key);
+                var shiftedPosition = newposition % 26;
+                let plaintext = alphabets[shiftedPosition];
+                result += plaintext;
+                let spn = '';
+
+                if (i == 1) {
+                    if (ciphertext.length > 2) {
+                        spn = 'rowspan="2"';
+                    }
+                    valkey = 'Forward (+)';
+                }
+                if (i > 1) {
+                    valkey = '';
+                    spn = '';
+                }
+                console.log(i);
+                _html += `<tr>
+                            <td>${char}</td>
+                            <td>${position}</td>`
+                if (i != 2) {
+                    _html += `<td ${spn}>${valkey}</td>`;
+                }
+                _html += `          <td>${newposition}</td>
+                            <td>${shiftedPosition} </td>
+                            <td>${plaintext}</td>
+                         </tr>`;
             }
-            return isValid;
-        });
-
-
+            $("#tblenp tfoot").html(_html);
+            decryptText(result, key)
+        }
     </script>
 </body>
 
